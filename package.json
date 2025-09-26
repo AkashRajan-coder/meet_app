@@ -1,0 +1,23 @@
+{
+  "name": "MeetAppServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.10",
+    "router": "^2.2.0"
+  }
+}
