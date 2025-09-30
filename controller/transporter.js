@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 
-dotenv.config(); // Load .env
+dotenv.config();
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -9,13 +9,13 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS, // App Password
   },
-  logger: true,
-  debug: true,
+  logger: true,  // for logs
+  debug: true,   // for debugging
 });
 
-// Verify connection
+// Verify transporter
 transporter.verify()
-  .then(() => console.log("Mail server ready"))
-  .catch(console.error);
+  .then(() => console.log("Mail server ready ✅"))
+  .catch(err => console.error("Mail server error ❌", err));
 
-export default transporter; // ES module default export
+export default transporter;
